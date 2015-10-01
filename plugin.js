@@ -143,7 +143,7 @@ function addLicenseAndReleaseNotes(config, manifest) {
 
 function fileExists(path) {
   try {
-    stats = fs.lstatSync(path);
+    var stats = fs.lstatSync(path);
     return true;
   } catch (e) {
     return false;
