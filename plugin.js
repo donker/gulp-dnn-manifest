@@ -1,3 +1,4 @@
+'use strict';
 var through = require('through2'),
   gulp = require('gulp-util'),
   PluginError = gulp.PluginError,
@@ -9,7 +10,7 @@ var through = require('through2'),
 
 var PLUGIN_NAME = 'gulp-dnn-manifest';
 
-function manifest(options) {
+module.exports = function (options) {
 
   // The config is taken from some defaults specified below with options supplied to this method which should be the package.json
   var defaults = {
@@ -364,4 +365,3 @@ function addScriptComponent(config, manifest) {
 
 }
 
-module.exports = manifest;
