@@ -18,6 +18,7 @@ module.exports = function (options) {
   var defaults = {
     version: '01.00.00',
     dnnModule: {
+      pathToAssemblies: './bin',
       pathToScripts: './_Installation/SQL',
       pathToSupplementaryFiles: './_Installation',
       excludedPaths: ['node_modules', '_references']
@@ -189,10 +190,10 @@ function getCoreReferenceVersion(config) {
     minor: 0,
     build: 0
   };
-  var files = fs.readdirSync("./bin");
+  var files = fs.readdirSync(config.dnnModule.pathToAssemblies);
   for (var i in files) {
     if (path.extname(files[i]) === ".dll") {
-      var refs = getReferences('./bin/' + files[i], true);
+      var refs = getReferences(config.dnnModule.pathToAssemblies + '/' + files[i], true);
       if (refs.DotNetNuke !== undefined) {
         refVersion = getLargestVersion(refVersion, refs.DotNetNuke);
       }
@@ -284,7 +285,7 @@ var getAssemblyVersion = edge.func({
 
 function addAssemblyComponent(config, manifest) {
 
-  var files = fs.readdirSync("./bin");
+  var files = fs.readdirSync(config.dnnModule.pathToAssemblies);
 
   if (files.length > 0) {
     var component = {
@@ -307,7 +308,7 @@ function addAssemblyComponent(config, manifest) {
             files[i]
           ],
           "version": [
-            getAssemblyVersion('./bin/' + files[i], true)
+            getAssemblyVersion(config.dnnModule.pathToAssemblies + '/' + files[i], true)
           ]
         };
         component.assemblies[0].assembly.push(assembly);

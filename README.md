@@ -39,6 +39,7 @@ In any case it is expected to contain the following segment:
     },
     "tempPath": "./package",
     "packagesPath": "./_Packages",
+    "pathToAssemblies": "./bin",
     "pathToScripts": "./_Installation/SQL",
     "pathToSupplementaryFiles": "./_Installation",
     "excludeFilter": [
@@ -55,9 +56,9 @@ It will use the supplied configuration and what it finds in the various director
 Specifically it will:
 
 1. Look for license.txt and releasenotes.txt in the "pathToSupplementaryFiles"
-2. Check the dlls in the bin folder (directly in the module's folder) and find the maximum DotNetNuke.dll dependency
-3. Check the dlls in the bin folder and compile an assembly list with correct version numbers
-4. Check the pathToScripts for SqlDataProvider files and add the scripts component
+2. Check the dlls in the "pathToAssemblies" folder and find the maximum DotNetNuke.dll dependency
+3. Check the dlls in the "pathToAssemblies" folder and compile an assembly list with correct version numbers
+4. Check the "pathToScripts" for SqlDataProvider files and add the scripts component
 
 ## License
 
