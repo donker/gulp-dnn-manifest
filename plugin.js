@@ -349,10 +349,10 @@ function addScriptComponent(config, manifest) {
           "name": [el],
           "version": [m[2] + '.' + m[3] + '.' + m[4]]
         };
-        component.scripts.push(script);
+        component.scripts[0].script.push(script);
       }
       if (el == 'Uninstall.SqlDataProvider') {
-        component.scripts.push({
+        component.scripts[0].script.push({
           "$": {
             "type": "UnInstall"
           },
