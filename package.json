@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/donker/gulp-dnn-manifest.git"
   },
-  "author": "= <=> (=)",
+  "author": "Peter Donker",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/donker/gulp-dnn-manifest/issues"

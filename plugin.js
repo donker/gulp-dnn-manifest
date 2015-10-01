@@ -279,20 +279,6 @@ var getAssemblyVersion = edge.func({
   }
 });
 
-function recurseRead(path) {
-  fs.readdir(path, function(err, files) {
-    files.forEach(function(el, i, arr) {
-      getVersionFromScriptFile(el);
-      var newPath = path + '/' + el;
-      // console.log(newPath)
-      var st = fs.statSync(newPath);
-      if (st.isDirectory()) {
-        recurseRead(newPath);
-      }
-    });
-  });
-}
-
 function addAssemblyComponent(config, manifest) {
 
   var files = fs.readdirSync("./bin");
