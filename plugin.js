@@ -12,7 +12,9 @@ var PLUGIN_NAME = 'gulp-dnn-manifest';
 
 module.exports = function (options) {
 
-  // The config is taken from some defaults specified below with options supplied to this method which should be the package.json
+  // The config is taken from some defaults specified below with options supplied 
+  // to this method which should be the package.json
+
   var defaults = {
     version: '01.00.00',
     dnnModule: {
