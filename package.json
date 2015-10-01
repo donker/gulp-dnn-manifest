@@ -1,0 +1,27 @@
+{
+  "name": "gulp-dnn-manifest",
+  "version": "0.0.1",
+  "description": "Gulp task to create a DNN manifest based on an existing manifest and files in the project directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donker/gulp-dnn-manifest.git"
+  },
+  "author": "= <=> (=)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/donker/gulp-dnn-manifest/issues"
+  },
+  "homepage": "https://github.com/donker/gulp-dnn-manifest#readme",
+  "dependencies": {
+    "edge": "^4.0.0",
+    "extend": "^3.0.0",
+    "gulp-util": "^3.0.6",
+    "jquery": "^2.1.4",
+    "through2": "^2.0.0",
+    "xml2js": "^0.4.12"
+  }
+}
