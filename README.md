@@ -53,6 +53,7 @@ In any case it is expected to contain the following segment:
 This plugin will take your original DNN manifest and only use the module definition section to generate a new one. 
 It will use the supplied configuration and what it finds in the various directories to compile a valid and updated manifest.
 Specifically it will:
+
 1. Look for license.txt and releasenotes.txt in the "pathToSupplementaryFiles"
 2. Check the dlls in the bin folder (directly in the module's folder) and find the maximum DotNetNuke.dll dependency
 3. Check the dlls in the bin folder and compile an assembly list with correct version numbers
