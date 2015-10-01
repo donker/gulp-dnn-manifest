@@ -98,11 +98,11 @@ module.exports = function (options) {
       manifest = addLicenseAndReleaseNotes(config, manifest);
 
       // Components section
-      manifest.dotnetnuke.packages[0].package[0].components = [];
+      manifest.dotnetnuke.packages[0].package[0].components = [{component: []}];
       for (var i = 0; i < oldManifest.dotnetnuke.packages[0].package[0].components[0].component.length; i++) {
         var cType = oldManifest.dotnetnuke.packages[0].package[0].components[0].component[i].$.type;
         if (cType === "Module") {
-          manifest.dotnetnuke.packages[0].package[0].components.push(oldManifest.dotnetnuke.packages[0].package[0].components[0].component[i])
+          manifest.dotnetnuke.packages[0].package[0].components[0].component.push(oldManifest.dotnetnuke.packages[0].package[0].components[0].component[i])
         }
       }
       manifest = addResourceComponent(config, manifest);
@@ -151,7 +151,7 @@ function fileExists(path) {
 }
 
 function addResourceComponent(config, manifest) {
-  manifest.dotnetnuke.packages[0].package[0].components.push({
+  manifest.dotnetnuke.packages[0].package[0].components[0].component.push({
     "$": {
       "type": "ResourceFile"
     },
@@ -315,7 +315,7 @@ function addAssemblyComponent(config, manifest) {
       }
     }
 
-    manifest.dotnetnuke.packages[0].package[0].components.push(component);
+    manifest.dotnetnuke.packages[0].package[0].components[0].component.push(component);
   }
 
   return manifest;
@@ -361,7 +361,7 @@ function addScriptComponent(config, manifest) {
         });
       }
     });
-    manifest.dotnetnuke.packages[0].package[0].components.push(component);
+    manifest.dotnetnuke.packages[0].package[0].components[0].component.push(component);
   }
 
   return manifest;
