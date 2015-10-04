@@ -60,6 +60,10 @@ Specifically it will:
 3. Check the dlls in the "pathToAssemblies" folder and compile an assembly list with correct version numbers
 4. Check the "pathToScripts" for SqlDataProvider files and add the scripts component
 
+## FAQ
+*Why do you need an original manifest to work from?*
+Because the module definition part cannot be auto generated and it includes so many features that recreating this in JSON didn't make sense to me. In my own development work I keep a minimal manifest with at least the module definition section in it. And whenever I make changes to the module definition I do it there. The other components (assembly, scripts, etc) can be auto generated from the project. That is what this plugin does.
+
 ## License
 
 MIT © [Peter Donker](http://www.bring2mind.net)
