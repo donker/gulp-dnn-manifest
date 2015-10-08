@@ -2,7 +2,7 @@
   "name": "gulp-dnn-manifest",
   "version": "0.1.0",
   "description": "Gulp task to create a DNN manifest based on an existing manifest and files in the project directory",
-  "main": "index.js",
+  "main": "plugin.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
