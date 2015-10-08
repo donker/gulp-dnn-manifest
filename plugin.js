@@ -131,7 +131,7 @@ function addLicenseAndReleaseNotes(config, manifest) {
       }
     }];
   }
-  if (fileExists(config.dnnModule.pathToSupplementaryFiles + '/ReleaseNotes.txt')) {
+  if (fileExists(config.dnnModule.pathToSupplementaryFiles + '/ReleaseNotes.txt') | fileExists(config.dnnModule.pathToSupplementaryFiles + '/ReleaseNotes.md')) {
     manifest.dotnetnuke.packages[0].package[0].releaseNotes = [{
       "$": {
         "src": "ReleaseNotes.txt"
