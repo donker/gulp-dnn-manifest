@@ -1,6 +1,6 @@
 {
   "name": "gulp-dnn-manifest",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Gulp task to create a DNN manifest based on an existing manifest and files in the project directory",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/donker/gulp-dnn-manifest.git"
   },
-  "author": "Peter Donker",
+  "author": "Peter Donker <peter@bring2mind.net> (http://www.bring2mind.net)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/donker/gulp-dnn-manifest/issues"
