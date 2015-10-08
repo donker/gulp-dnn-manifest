@@ -4,13 +4,13 @@ Gulp task to create a DNN manifest based on an existing manifest and files in th
 ## Install
 
 ```
-$ npm install donker/gulp-dnn-manifest
+$ npm install gulp-dnn-manifest
 ```
 
 ## Usage
 
 ```js
-var manifest = require('./node_modules/gulp-dnn-manifest/plugin.js'),
+var manifest = require('gulp-dnn-manifest'),
     config = require('./package.json');
 
 gulp.src('path/to/original/manifest.dnn')
