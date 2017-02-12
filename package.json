@@ -10,14 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/donker/gulp-dnn-manifest.git"
   },
-  "author": "Peter Donker <peter@bring2mind.net> (http://www.bring2mind.net)",
+  "author": {
+    "name": "Peter Donker",
+    "email": "peter@bring2mind.net",
+    "url": "http://www.bring2mind.net"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/donker/gulp-dnn-manifest/issues"
   },
   "homepage": "https://github.com/donker/gulp-dnn-manifest#readme",
   "dependencies": {
-    "edge": "^4.0.0",
+    "edge": "^6.5.1",
     "extend": "^3.0.0",
     "gulp-util": "^3.0.6",
     "jquery": "^2.1.4",
