@@ -1,6 +1,8 @@
 'use strict';
 var dnnModule = require('./lib/module.js'),
     dnnSkin = require('./lib/skin.js'),
+    dnnLibrary = require('./lib/library.js'),
+    dnnPersonaBar = require('./lib/personabar.js'),
     extend = require('extend'),
     gutil = require('gulp-util');
 
@@ -11,6 +13,7 @@ module.exports = function(options, originalManifestFileName) {
     var defaults = {
         version: '01.00.00',
         dnn: {
+            projectType: "module",
             packagesPath: "./_Packages",
             pathToAssemblies: './bin',
             pathToScripts: './_Installation/SQL',
@@ -31,6 +34,12 @@ module.exports = function(options, originalManifestFileName) {
             break;
         case "module":
             manifest = dnnModule(config, originalManifestFileName);
+            break;
+        case "library":
+            manifest = dnnLibrary(config, originalManifestFileName);
+            break;
+        case "personabar":
+            manifest = dnnPersonaBar(config, originalManifestFileName);
             break;
     }
 
