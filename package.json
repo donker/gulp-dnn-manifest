@@ -1,6 +1,6 @@
 {
   "name": "gulp-dnn-manifest",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Gulp task to create a DNN manifest based on an existing manifest and files in the project directory",
   "main": "plugin.js",
   "scripts": {
