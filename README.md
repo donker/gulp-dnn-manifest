@@ -21,10 +21,14 @@ The config is taken from the package.json in the code segment above, but you cou
 In any case it is expected to contain the following segment:
 
 ```
-  "dnnModule": {
-    "fullName": "Connect.Map",
+"dnn": {
+    "projectType": "module",
+    "dnnDependency": "08.00.00",
+    "name": "Connect.Map",
     "friendlyName": "Map Module",
     "packageName": "Connect_Map",
+    "folder": "MVC/Connect/Map",
+    "iconFile": "DesktopModules\\MVC\\Connect\\Map\\Map.png",
     "owner": {
       "name": "Peter Donker",
       "organization": "DNN Connect",
@@ -32,22 +36,19 @@ In any case it is expected to contain the following segment:
       "email": "peter@bring2mind.net"
     },
     "module": {
-      "packageName": "Connect_Map",
-      "folderName": "Connect/Map",
-      "azureCompatible": "true",
-      "iconFile": "DesktopModules\\Connect\\Map\\map.png"
+        "azureCompatible": "true"
     },
-    "tempPath": "./package",
     "packagesPath": "./_Packages",
-    "pathToAssemblies": "./bin",
     "pathToScripts": "./_Installation/SQL",
     "pathToSupplementaryFiles": "./_Installation",
+    "pathToAssemblies": "./bin",
     "excludeFilter": [
-     "node_modules",
-     "bin",
-     "obj"
-    ]
-  },
+        "node_modules",
+        "bin",
+        "obj"
+    ],
+    "zipName": "Connect.Map"
+},
 ```
 
 ## Description
