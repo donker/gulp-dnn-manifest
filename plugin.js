@@ -4,7 +4,8 @@ var dnnModule = require('./lib/module.js'),
     dnnLibrary = require('./lib/library.js'),
     dnnPersonaBar = require('./lib/personabar.js'),
     extend = require('extend'),
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
+    file = require('gulp-file');
 
 var PLUGIN_NAME = 'gulp-dnn-manifest';
 
@@ -43,15 +44,6 @@ module.exports = function(options, originalManifestFileName) {
             break;
     }
 
-    return string_src("version.dnn", manifest);
+    return file("version.dnn", manifest);
 
-}
-
-function string_src(filename, string) {
-    var src = require('stream').Readable({ objectMode: true })
-    src._read = function() {
-        this.push(new gutil.File({ cwd: "", base: "", path: filename, contents: new Buffer(string) }))
-        this.push(null)
-    }
-    return src
 }
