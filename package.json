@@ -1,6 +1,6 @@
 {
     "name": "gulp-dnn-manifest",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "Gulp task to create a DNN manifest based on an existing manifest and files in the project directory",
     "main": "plugin.js",
     "scripts": {
@@ -21,7 +21,7 @@
     },
     "homepage": "https://github.com/donker/gulp-dnn-manifest#readme",
     "dependencies": {
-        "edge": "^6.5.1",
+        "edge-js": "^10.3.1",
         "extend": "^3.0.0",
         "gulp-file": "^0.3.0",
         "gulp-util": "^3.0.6",
