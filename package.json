@@ -24,7 +24,6 @@
         "edge-js": "^10.3.1",
         "extend": "^3.0.0",
         "gulp-file": "^0.3.0",
-        "gulp-util": "^3.0.6",
         "jquery": "^2.1.4",
         "through2": "^2.0.0",
         "xml2js": "^0.4.12"
